@@ -1,11 +1,11 @@
 <div class="p-6">
     <div class="flex items-center justify-end px-4 py-3 text-right sm:px-6">
-        <x-button class="mr-5" wire:click="dispatchEvent">
+        <x-buttons.button class="mr-5" wire:click="dispatchEvent">
             {{ __('Dispatch Event') }}
-        </x-button>
-        <x-button wire:click="createShowModal">
+        </x-buttons.button>
+        <x-buttons.button wire:click="createShowModal">
             {{ __('Create') }}
-        </x-button>
+        </x-buttons.button>
     </div>
 
     {{-- The data table --}}
@@ -43,12 +43,12 @@
                                     </td>
                                     <td class="px-6 py-4 text-sm whitespace-no-wrap">{!! \Illuminate\Support\Str::limit($item->content, 50, '...') !!}</td>
                                     <td class="px-6 py-4 text-right text-sm">
-                                        <x-button wire:click="updateShowModal({{ $item->id }})">
+                                        <x-buttons.button wire:click="updateShowModal({{ $item->id }})">
                                             {{ __('Update') }}
-                                        </x-button>
-                                        <x-danger-button wire:click="deleteShowModal({{ $item->id }})">
+                                        </x-buttons.button>
+                                        <x-buttons.danger-button wire:click="deleteShowModal({{ $item->id }})">
                                             {{ __('Delete') }}
-                                            </x-danger-button>
+                                            </x-buttons.danger-button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -72,19 +72,19 @@
     {{ $data->links() }}
 
     {{-- Modal Form --}}
-    <x-dialog-modal wire:model="modalFormVisible">
+    <x-modals.dialog-modal wire:model="modalFormVisible">
         <x-slot name="title">
             {{ __('Save Page') }}
         </x-slot>
 
         <x-slot name="content">
             <div class="mt-4">
-                <x-label for="title" value="{{ __('Title') }}" />
-                <x-input id="title" class="block mt-1 w-full" type="text" wire:model.debounce.800ms="title" />
+                <x-forms.label for="title" value="{{ __('Title') }}" />
+                <x-forms.input id="title" class="block mt-1 w-full" type="text" wire:model.debounce.800ms="title" />
                 @error('title') <span class="error">{{ $message }}</span> @enderror
             </div>
             <div class="mt-4">
-                <x-label for="title" value="{{ __('Slug') }}" />
+                <x-forms.label for="title" value="{{ __('Slug') }}" />
                 <div class="mt-1 flex rounded-md shadow-sm">
                     <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
                         http://localhost:8000/
@@ -106,7 +106,7 @@
                 </label>
             </div>
             <div class="mt-4">
-                <x-label for="title" value="{{ __('Content') }}" />
+                <x-forms.label for="title" value="{{ __('Content') }}" />
                 <div class="rounded-md shadow-sm">
                     <div class="mt-1 bg-white">
                         <div class="body-content" wire:ignore>
@@ -124,27 +124,27 @@
         </x-slot>
 
         <x-slot name="footer">
-            <x-secondary-button wire:click="$toggle('modalFormVisible')" wire:loading.attr="disabled">
+            <x-buttons.secondary-button wire:click="$toggle('modalFormVisible')" wire:loading.attr="disabled">
                 {{ __('Never mind') }}
-            </x-secondary-button>
+            </x-buttons.secondary-button>
 
             @if ($modelId)
-                <x-button class="ml-2" wire:click="update" wire:loading.attr="disabled">
+                <x-buttons.button class="ml-2" wire:click="update" wire:loading.attr="disabled">
                     {{ __('Update') }}
-                    </x-button>
+                    </x-buttons.button>
                     @else
-                        <x-button class="ml-2" wire:click="create" wire:loading.attr="disabled">
-                            {{ __('Create') }}
-                            </x-button>
+                <x-buttons.button class="ml-2" wire:click="create" wire:loading.attr="disabled">
+                    {{ __('Create') }}
+                </x-buttons.button>
             @endif
 
         </x-slot>
 
-    </x-dialog-modal>
+    </x-modals.dialog-modal>
 
     {{-- The Delete Modal --}}
 
-    <x-dialog-modal wire:model="modalConfirmDeleteVisible">
+    <x-modals.dialog-modal wire:model="modalConfirmDeleteVisible">
 
         <x-slot name="title">
             {{ __('Delete Page') }}
@@ -155,13 +155,13 @@
         </x-slot>
 
         <x-slot name="footer">
-            <x-secondary-button wire:click="$toggle('modalConfirmDeleteVisible')" wire:loading.attr="disabled">
+            <x-buttons.secondary-button wire:click="$toggle('modalConfirmDeleteVisible')" wire:loading.attr="disabled">
                 {{ __('Nevermind') }}
-            </x-secondary-button>
+            </x-buttons.secondary-button>
 
-            <x-danger-button class="ml-2" wire:click="delete" wire:loading.attr="disabled">
+            <x-buttons.danger-button class="ml-2" wire:click="delete" wire:loading.attr="disabled">
                 {{ __('Delete Page') }}
-            </x-danger-button>
+            </x-buttons.danger-button>
         </x-slot>
-    </x-dialog-modal>
+    </x-modals.dialog-modal>
 </div>
