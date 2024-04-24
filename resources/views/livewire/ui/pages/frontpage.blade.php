@@ -4,7 +4,7 @@
 
     </head>
     <body>
-        <x-components.ui.pages.banner message="Welcome to the site!"/>
+    @livewire('banner')
         <div class="divide-y divide-gray-800">
             <nav class="flex items-center bg-gray-900 px-3 py-2 shadow-lg ">
                 <div>
@@ -100,6 +100,7 @@
             </div>
 
             @livewireScripts
+
         </div>
     </body>
 </div>
