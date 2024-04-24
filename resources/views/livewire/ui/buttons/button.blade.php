@@ -1,3 +1,3 @@
-<button class="btn btn-primary">
-    Click me
-</button>
+<div>
+    {{-- In work, do what you enjoy. --}}
+</div>

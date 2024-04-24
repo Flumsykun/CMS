@@ -4,7 +4,7 @@
 
     </head>
     <body>
-    @livewire('ui.pages.banner')
+    {{--@livewire('ui.pages.banner')--}}
         <div class="divide-y divide-gray-800">
             <nav class="flex items-center bg-gray-900 px-3 py-2 shadow-lg ">
                 <div>
