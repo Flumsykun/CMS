@@ -11,8 +11,10 @@ class Button extends Component
 
     public function render()
     {
-        return view('livewire.button')->with([
-            'author' => Auth::user()->name,
-        ]);
+        return view('livewire.ui.buttons.button');
+
+        //return view('livewire.ui.buttons.button')->with([
+        //    'author' => Auth::user()->name,
+        //]);
     }
 }

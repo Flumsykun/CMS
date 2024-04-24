@@ -1,4 +1,4 @@
-@extends('frontend.layout')
+@extends('layouts.layout')
 
 @section('frontend_content')
     <div class="bg-white px-6 py-32 lg:px-8">

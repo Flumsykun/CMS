@@ -304,7 +304,7 @@ class Pages extends Component
      */
     public function render(): view
     {
-        return view('livewire.pages', [
+        return view('livewire.ui.pages.pages', [
             'data' => $this->read(),
         ]);
     }

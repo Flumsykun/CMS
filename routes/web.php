@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.welcome');
 });
 
 Route::middleware(['auth:sanctum',
@@ -28,7 +28,7 @@ Route::middleware(['auth:sanctum',
     })->name('dashboard');
 
     Route::get('/pages', function () {
-        return view('pages');
+        return view('pages.pages');
     })->name('pages');
 
     Route::get('/navigation-menus', function () {

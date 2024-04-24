@@ -1,4 +1,4 @@
-@extends('frontend.layout')
+@extends('layouts.layout')
 
 @section('frontend_content')
     @php
@@ -22,7 +22,7 @@
                       class="block text-sm leading-6 text-gray-600 pt-2">{{ $first->published_at->format('d-m-Y') }}</time>
                 <p class="mt-4 text-lg leading-8 text-gray-600">{!! $first->teaser !!}</p>
                 <div
-                    class="mt-4 flex flex-col justify-between gap-6 sm:mt-8 sm:flex-row-reverse sm:gap-8 lg:mt-4 lg:flex-col">
+                        class="mt-4 flex flex-col justify-between gap-6 sm:mt-8 sm:flex-row-reverse sm:gap-8 lg:mt-4 lg:flex-col">
                     <div class="flex">
                         <a href="{{ route('news.show', ['newsPost' => $first]) }}"
                            class="text-sm font-semibold leading-6 text-voot-600" aria-describedby="featured-post">Lees
@@ -31,7 +31,7 @@
                 </div>
             </article>
             <div
-                class="mx-auto w-full max-w-2xl border-t border-gray-900/10 pt-12 sm:pt-16 lg:mx-0 lg:max-w-none lg:border-t-0 lg:pt-0">
+                    class="mx-auto w-full max-w-2xl border-t border-gray-900/10 pt-12 sm:pt-16 lg:mx-0 lg:max-w-none lg:border-t-0 lg:pt-0">
                 <div class="-my-12 divide-y divide-gray-900/10">
                     @foreach($newsPosts as $newsPost)
                         <article class="py-12">
@@ -53,7 +53,7 @@
                                     <a href="{{ route('news.show', compact('newsPost')) }}"
                                        class="text-sm font-semibold leading-6 text-voot-600"
                                        aria-describedby="featured-post">Lees verder <span
-                                            aria-hidden="true">&rarr;</span></a>
+                                                aria-hidden="true">&rarr;</span></a>
                                 </div>
                             </div>
                         </article>
