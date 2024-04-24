@@ -88,7 +88,7 @@ class Frontpage extends Component
      */
     public function render()
     {
-        return view('livewire.frontpage', [
+        return view('livewire.ui.pages.frontpage', [
 //            'sideBarLinks' => $this->sideBarLinks(),
 //            'topNavLinks' => $this->topNavLinks(),
         ])->layout('layouts.frontpage');

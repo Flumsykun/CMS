@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('frontend_content')
- 
+
 
     @include('frontend.parts.upcoming-events', compact('events'))
 

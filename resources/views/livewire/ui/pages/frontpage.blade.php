@@ -94,7 +94,6 @@
                         </article>
                     </section>
 
-                    <livewire:notification-component/>
                 </main>
             </div>
 
