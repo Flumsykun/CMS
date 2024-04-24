@@ -1,17 +1,19 @@
 <div>
     <head>
         @livewireStyles
+
     </head>
     <body>
+        <x-components.ui.pages.banner message="Welcome to the site!"/>
         <div class="divide-y divide-gray-800">
             <nav class="flex items-center bg-gray-900 px-3 py-2 shadow-lg ">
                 <div>
                     <button class="block h-8 mr-3 text-gray-400 items-center
-                    hover:text-gray-200 focus:text-gray-200 focus:outline-none">
+                        hover:text-gray-200 focus:text-gray-200 focus:outline-none">
                         <svg class="w-8 fill-current" viewBox="0 0 24 24">
                             <path fill-rule="evenodd" d="M4 5h16a1 1 0 0
-                            1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1
-                            0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+                                1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1
+                                0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
                         </svg>
                     </button>
                 </div>
@@ -32,44 +34,44 @@
             </nav>
             <div class="sm:flex sm:min-h-screen">
                 <aside class="bg-gray-900 text-gray-200 divide-y
-                 divide-gray-900 divide-dashed sm:w-4/12 md:w-3/12 lg:w-2/12">
+                     divide-gray-900 divide-dashed sm:w-4/12 md:w-3/12 lg:w-2/12">
                     {{--Desktop Web View--}}
                     <ul class="hidden text-gray-100 text-xl sm:block
-                    sm:text-left">
+                        sm:text-left">
                         <a href="{{ url('/home')}}">
                             <li class="cursor-pointer px-4 py-2
-                        hover:bg-gray-800">Home
+                            hover:bg-gray-800">Home
                             </li>
                         </a>
                         <a href="{{ url('/about')}}">
                             <li class="cursor-pointer px-4 py-2
-                             hover:bg-gray-800">About
+                                 hover:bg-gray-800">About
                             </li>
                         </a>
                         <a href="{{ url('/contact')}}">
                             <li class="cursor-pointer px-4 py-2
-                             hover:bg-gray-800">Contact
+                                 hover:bg-gray-800">Contact
                             </li>
                         </a>
                     </ul>
 
                     {{--Mobile Web View--}}
                     <div class="pb-3 divide-y divide-gray-800 block
-                    sm:hidden">
+                        sm:hidden">
                         <ul class="text-gray-200 text-xl">
                             <a href="{{ url('/home')}}">
                                 <li class="cursor-pointer px-4 py-2
-                             hover:bg-gray-800">Home
+                                 hover:bg-gray-800">Home
                                 </li>
                             </a>
                             <a href="{{ url('/about')}}">
                                 <li class="cursor-pointer px-4 py-2
-                             hover:bg-gray-800">About
+                                 hover:bg-gray-800">About
                                 </li>
                             </a>
                             <a href="{{ url('/contact')}}">
                                 <li class="cursor-pointer px-4 py-2
-                             hover:bg-gray-800">Contact
+                                 hover:bg-gray-800">Contact
                                 </li>
                             </a>
                         </ul>
@@ -78,7 +80,7 @@
                         <ul class="text-grey-200 text-xl">
                             <a href="{{ url('/home')}}">
                                 <li class="cursor-pointer px-4 py-2
-                                hover:bg-gray-800">Login
+                                    hover:bg-gray-800">Login
                                 </li>
                             </a>
                         </ul>
@@ -98,5 +100,6 @@
             </div>
 
             @livewireScripts
+        </div>
     </body>
 </div>
