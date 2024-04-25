@@ -10,6 +10,7 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
                 {{--<x-ui.pages.welcome />--}}
                 @livewire('ui.pages.welcome')
+                @livewire('toast')
             </div>
         </div>
     </div>
