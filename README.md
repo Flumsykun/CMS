@@ -2,35 +2,10 @@
 
 ## Table Of Contents
 
-* [About the Project](#about-the-project)
-* [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
-* [Contributing](#contributing)
-* [Author](#author)
-
-## About The Project
-
-Dit is mijn laatste project voor het GLR, het is een eigengemaakte CMS examen project met volledige documentatie.
-
-## Built With
-
-- **Laravel**: Fast, efficient PHP framework for web development.
-- **Blade**: Simple, powerful templating engine for Laravel.
-- **Tailwind CSS**: Utility-first CSS framework for rapid styling.
-- **Jetstream**: Streamlines user authentication and team management.
-- **Livewire**: Simplifies building dynamic interfaces without JavaScript.
-- **Sail**: Docker development environment for Laravel projects.
-
-
-* [**Laravel**](https://laravel.com/)
-* [**Blade**](https://laravel.com/docs/10.x/blade)
-* [**Tailwind CSS**](https://tailwindui.com/)
-* [**Jetstream**](https://jetstream.laravel.com/introduction.html)
-* [**Livewire**](https://laravel-livewire.com/)
-* [**Sail**](https://laravel.com/docs/10.x/sail)
 
 ## Getting Started
 > [!IMPORTANT]
@@ -223,6 +198,3 @@ sail artisan npm run build
 >php artisan serve
 >``` 
 
-## Author
-
-* **Flumsykun** - *GLR Student* - [Flumsykun](https://github.com/Flumsykun/) - *Made this entire thing with alot of caffeine!*
