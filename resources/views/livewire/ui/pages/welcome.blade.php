@@ -4,17 +4,11 @@
         <x-application.logo class="block h-12 w-auto"/>
 
         <h1 class="mt-8 text-2xl font-medium text-gray-900 dark:text-white">
-            Kippenlachen
+            header.text
         </h1>
 
         <p class="mt-6 text-gray-500 dark:text-gray-400 leading-relaxed">
-            Je oma op een driewieler, dat is pas lachen. En dat is precies wat we gaan doen.
-            kanker is een ziekte, geen grap. Maar we gaan wel lachen.
-            Objectief gezien is het niet grappig, maar we gaan wel lachen.
-            Subjectief gezien is het niet grappig, maar we gaan wel lachen.
-            Kanker is lekkere kip, maar we gaan wel lachen.
-            Poolse mensen zijn niet grappig, maar we gaan wel lachen.
-            Poolse hoeren zijn geil en grappig, maar we gaan wel lachen.
+            lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
     </div>
 

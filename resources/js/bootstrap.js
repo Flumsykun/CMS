@@ -31,9 +31,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     enabledTransports: ['ws', 'wss'],
 // });
 
-import { Livewire, Alpine } from '../../../vendor/livewire/livewire/dist/livewire.esm';
-
-
-window.Livewire = Livewire;
-window.Alpine = Alpine;
-
+// import { Livewire, Alpine } from '../../../vendor/livewire/livewire/dist/livewire.esm';
+//
+//
+// window.Livewire = Livewire;
+// window.Alpine = Alpine;
+//
