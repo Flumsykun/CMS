@@ -1,43 +1,4 @@
 
-<p align="center">
-  <h1 align="center"> <pre>
- ____    __       ____       
-/\  _`\ /\ \     /\  _`\     
-\ \ \L\_\ \ \    \ \ \L\ \   
- \ \ \L_L\ \ \  __\ \ ,  /   
-  \ \ \/, \ \ \L\ \\ \ \\ \  
-   \ \____/\ \____/ \ \_\ \_\
-    \/___/  \/___/   \/_/\/ /
-    </pre></h1>
-
-  <p align="center">
-     voor GLR by: 085942
-    <br/>
-    <br/>
-  </p>
-  
- ### 
- 
-<div align="center">
-  <img src="https://cdn.simpleicons.org/laravel/FF2D20" height="40" alt="laravel logo"  />
-  <img width="15" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" height="40" alt="tailwind logo" />  
-  <img width="15" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/livewire/livewire-original-wordmark.svg" height="40" alt="livewire logo" />
-  <img width="15" />
-  <img src="https://ih1.redbubble.net/image.2428884987.0603/st,small,507x507-pad,600x600,f8f8f8.u3.jpg" height="40" alt="jetstream logo"/>
-  <img width="15" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg" height="40" alt="docker logo"/>
-  <img width="15" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/phpstorm/phpstorm-original.svg" height="40" alt="phpstorm logo"  />
-  <img width="15" />
-
-</div>
-
-  ###
-
-
-
 
 ## Table Of Contents
 
