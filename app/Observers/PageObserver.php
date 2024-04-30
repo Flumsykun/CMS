@@ -34,14 +34,5 @@ class PageObserver
         //dd('Event dispatched', $eventData);
     }
 
-    //public function restored(Page $page): void
-    //{
-    //    //
-    //}
-    //
-    //public function forceDeleted(Page $page): void
-    //{
-    //    //
-    //}
 
 }
