@@ -1,3 +1,4 @@
+<!-- resources/views/portal/livewire/toast.blade.php -->
 <div>
     @foreach($toastList as $toast)
         <div class="alert alert-{{ $toast['type'] }}">
