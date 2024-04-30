@@ -2,28 +2,29 @@
 
 namespace App\Observers;
 
-use App\Events\NotificationAdded;
 use App\Models\Page;
-use App\Notifications\PageEventNotification;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Event;
 
+
+/**
+ * @method dispatchBrowserEvent(string $string, string[] $array)
+ */
 class PageObserver
 {
-    /**
-     * Handle the Page "created" event.
-     */
     public function created(Page $page): void
     {
-       //
+        Event::dispatch('showToast', ['message' => 'Page created successfully!', 'type' => 'success']);
     }
+
+
     public function updated(Page $page): void
     {
-        //
+        //Livewire::emit('showToast', 'Page updated successfully!', 'success');
     }
 
     public function deleted(Page $page): void
     {
-        //
+        //Livewire::emit('showToast', 'Page deleted successfully!', 'warning');
     }
 
     public function restored(Page $page): void
