@@ -13,13 +13,6 @@ class Toast extends Component
 
     protected $listeners = ['showToast' => 'show'];
 
-    //public function mount()
-    //{
-    //    Event::listen('showToast', function ($data){
-    //        $this->show($data['message'], $data['type']);
-    //    });
-    //}
-
     public function show($message, $type)
     {
         //dd('Event received', $this->message, $this->type);
