@@ -12,21 +12,23 @@ class Toast extends Component
     public $type = '';
 
     protected $listeners = ['showToast' => 'show'];
-    public function mount()
-    {
-        Event::listen('showToast', function ($data){
-            $this->show($data['message'], $data['type']);
-        });
-    }
+
+    //public function mount()
+    //{
+    //    Event::listen('showToast', function ($data){
+    //        $this->show($data['message'], $data['type']);
+    //    });
+    //}
 
     public function show($message, $type)
     {
+        //dd('Event received', $this->message, $this->type);
         $this->message = $message;
         $this->type = $type;
-        dd('Event received', $this->message, $this->type);
     }
     public function render()
     {
+        //dd('component is being rendered');
         return view('livewire.toast');
     }
 }
