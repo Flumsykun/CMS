@@ -5,6 +5,7 @@
         <livewire:frontend.menu/>
 
         @yield('frontend_content')
+        @livewire('toast')
     </div>
     @include('frontend.parts.footer')
 @endsection

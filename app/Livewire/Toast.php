@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\helpers\Str;
 use Illuminate\Support\Facades\Event;
 use Livewire\Component;
 
@@ -10,7 +11,7 @@ class Toast extends Component
     public $message = '';
     public $type = '';
 
-    //protected $listeners = ['showToast' => 'show'];
+    protected $listeners = ['showToast' => 'show'];
     public function mount()
     {
         Event::listen('showToast', function ($data){
@@ -22,6 +23,7 @@ class Toast extends Component
     {
         $this->message = $message;
         $this->type = $type;
+        dd('Event received', $this->message, $this->type);
     }
     public function render()
     {
