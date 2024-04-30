@@ -19,12 +19,12 @@ class PageObserver
 
     public function updated(Page $page): void
     {
-        //Livewire::emit('showToast', 'Page updated successfully!', 'success');
+        Event::dispatch('showToast', ['message' => 'Page updated successfully!', 'type' => 'success']);
     }
 
     public function deleted(Page $page): void
     {
-        //Livewire::emit('showToast', 'Page deleted successfully!', 'warning');
+        Event::dispatch('showToast', ['message' => 'Page deleted successfully!', 'type' => 'success']);
     }
 
     public function restored(Page $page): void
