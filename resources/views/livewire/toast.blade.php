@@ -1,6 +1,10 @@
-
 <div wire:ignore wire:poll="refreshSession">
-    <div x-data="setupToasts(@js($toastList), {{ config('cms.toasts.display_time') }})"
+    <div x-data="{
+    toast: setupToasts(@js($toastList), {{ config('cms.toasts.display_time') }}),
+    add: function(detail){
+            this.toasts.push(detail);
+            }
+         }"
          x-on:toast-fired.window="add($event.detail)"
          class="fixed bottom-0 z-50 p-4 space-y-3 w-full max-w-sm right-0 sm:p-6"
     >
@@ -46,14 +50,22 @@
 
                         <p class="mt-1 text-sm text-gray-700" x-text="toast.message"></p>
                     </div>
+                    <button x-on:click="toast.thrash()" class="text-gray-500 transition hover:text-gray-600">
+                        <span class="sr-only">Dismiss popup</span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
                 </div>
-                    <div x-show="! toast.alwaysShown"
-                         class="absolute bottom-0 origin-bottom left-0 w-full rounded-full h-1">
-                        <div class="h-full rounded-full" x-bind:style="{width: `${toast.counter}%`}"
-                             x-bind:class="`toast-color ${toast.type}`"
-                        ></div>
-                    </div>
+                <div x-show="! toast.alwaysShown"
+                     class="absolute bottom-0 origin-bottom left-0 w-full rounded-full h-1">
+                    <div class="h-full rounded-full" x-bind:style="{width: `${toast.counter}%`}"
+                         x-bind:class="`toast-color ${toast.type}`"
+                    ></div>
                 </div>
+            </div>
         </template>
     </div>
 </div>
