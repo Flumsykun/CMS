@@ -74,11 +74,14 @@ export class ToastObject {
 
         this.visible = false;
 
-        this.$el.addEventListener('transitioncancel', () => {
-            this.trashed = true;
-        })
-        this.$el.addEventListener('transitionend', () => {
-            this.trashed = true;
-        })
+        if (this.$el) {
+            this.$el.addEventListener('transitioncancel', () => {
+                this.trashed = true;
+            })
+            this.$el.addEventListener('transitionend', () => {
+                this.trashed = true;
+            })
+        }
+
     }
 }
