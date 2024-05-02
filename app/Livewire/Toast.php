@@ -8,8 +8,8 @@ use Livewire\Component;
 
 class Toast extends Component
 {
-    public $message = '';
-    public $type = '';
+    public string $message = '';
+    public string $type = '';
 
     protected $listeners = ['showToast' => 'show'];
 
@@ -93,6 +93,7 @@ class Toast extends Component
         $this->toast('errors', $message);
     }
 
+    #[On('toast')]
     public function toast($type, $message = '', $alwaysShown = false)
     {
         $toast = [

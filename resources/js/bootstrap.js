@@ -1,3 +1,4 @@
+
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
@@ -31,9 +32,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     enabledTransports: ['ws', 'wss'],
 // });
 
-// import { Livewire, Alpine } from '../../../vendor/livewire/livewire/dist/livewire.esm';
-//
-//
-// window.Livewire = Livewire;
-// window.Alpine = Alpine;
-//
+import { Livewire, Alpine } from '../../vendor/livewire/livewire/dist/livewire.esm';
+import {ToastsPlugin} from './alpine/toast-plugin.js';
+
+window.Livewire = Livewire;
+window.Alpine = Alpine;
+
+// Alpine.data('setupToasts', toastsModule)
+Alpine.plugin(ToastsPlugin)
+
+Livewire.start()
