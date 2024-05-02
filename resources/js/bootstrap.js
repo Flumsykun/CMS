@@ -34,10 +34,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 import { Livewire, Alpine } from '../../vendor/livewire/livewire/dist/livewire.esm';
 import {ToastsPlugin} from './alpine/toast-plugin.js';
+import toastsModule from './alpine/toasts-module.js';
 
-window.Livewire = Livewire;
 window.Alpine = Alpine;
+window.Livewire = Livewire;
 
+Alpine.data('setupToasts', toastsModule)
 Alpine.plugin(ToastsPlugin)
+
+Livewire.start()
 
 // Livewire.start()

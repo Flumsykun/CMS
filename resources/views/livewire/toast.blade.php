@@ -1,30 +1,17 @@
 <div wire:ignore wire:poll="refreshSession">
-    <div x-data="{
-            toasts: setupToasts(@js($toastList), {{ config('cms.toasts.display_time') }}),
-            add: function(detail){
-                let toast = ToastObject.fromJson(detail);
-                this.toasts.push(toast);
-            },
-            show: function($el){
-                this.toasts.forEach(toast => {
-                    toast.show($el);
-                });
-            }
-         }"
+    <div x-data="setupToasts(@js($toastList), {{ config('voot.toasts.display_time') }})"
          x-on:toast-fired.window="add($event.detail)"
          class="fixed bottom-0 z-50 p-4 space-y-3 w-full max-w-sm right-0 sm:p-6"
     >
-        <template x-for="toast in toasts" :key="toast.uuid">
-            <div role="alert"
-                 x.show="toast.visible"
-                 x-init="$nextTick(() => toast.show($el))"
+        <template x-for="toast in toasts" :key="toast.id">
+            <div x-show="visible.find(vt => vt.uuid === toast.uuid)" role="alert"
                  x-transition:enter="transition-all ease-in duration-500"
                  x-transition:enter-start="transform -translate-x-100"
                  x-transition:enter-end="transform translate-x-0"
                  x-transition:leave="transition-all ease-out duration-500"
                  x-transition:leave-start="transform translate-y-0 opacity-100"
                  x-transition:leave-end="transform translate-y-100 opacity-0"
-                 class="relative rounded-xl p-4 shadow-xl overflow-hidden"
+                 class="transform -translate-x-100 transition-all rounded-xl p-4 shadow-xl overflow-hidden"
                  x-bind:class="`toast-border-color ${toast.type}`"
             >
                 {{--<div>--}}
@@ -56,7 +43,8 @@
 
                         <p class="mt-1 text-sm text-gray-700" x-text="toast.message"></p>
                     </div>
-                    <button x-on:click="toast.thrash()" class="text-gray-500 transition hover:text-gray-600">
+
+                    <button x-on:click="remove(toast.id)" class="text-gray-500 transition hover:text-gray-600">
                         <span class="sr-only">Dismiss popup</span>
 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -67,7 +55,7 @@
                 </div>
                 <div x-show="! toast.alwaysShown"
                      class="absolute bottom-0 origin-bottom left-0 w-full rounded-full h-1">
-                    <div class="h-full rounded-full" x-bind:style="{width: `${toast.counter}%`}"
+                    <div class="h-full rounded-full" x-bind:style="{width: `${counter[toast.uuid]}%`}"
                          x-bind:class="`toast-color ${toast.type}`"
                     ></div>
                 </div>
