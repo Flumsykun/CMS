@@ -38,7 +38,6 @@ import {ToastsPlugin} from './alpine/toast-plugin.js';
 window.Livewire = Livewire;
 window.Alpine = Alpine;
 
-// Alpine.data('setupToasts', toastsModule)
 Alpine.plugin(ToastsPlugin)
 
-Livewire.start()
+// Livewire.start()
