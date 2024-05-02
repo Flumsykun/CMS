@@ -7,10 +7,12 @@ use Illuminate\Support\str;
 use Illuminate\Validation\Rule;
 use Illuminate\View\View;
 use Livewire\Component;
+use App\Traits\Livewire\InteractsWithToasts;
 use Livewire\WithPagination;
 
 class Pages extends Component
 {
+    use InteractsWithToasts;
     use WithPagination;
     public $modalFormVisible = false;
     public $modalConfirmDeleteVisible = false;
