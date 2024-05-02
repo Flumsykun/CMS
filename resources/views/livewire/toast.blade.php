@@ -46,6 +46,13 @@
 
                         <p class="mt-1 text-sm text-gray-700" x-text="toast.message"></p>
                     </div>
+                    <button x-on:click="toast.trash()" class="text-gray-500 transition hover:text-gray-500">
+                        <span class="sr-only">Dismiss popup</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
                 </div>
                     <div x-show="! toast.alwaysShown"
                          class="absolute bottom-0 origin-bottom left-0 w-full rounded-full h-1">
