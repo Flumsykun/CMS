@@ -1,4 +1,4 @@
-<!-- resources/views/portal/livewire/toast.blade.php -->
+{{--<!-- resources/views/portal/livewire/toast.blade.php -->--}}
 <div>
     @foreach($toastList as $toast)
         <div class="alert alert-{{ $toast['type'] }}">
@@ -14,3 +14,4 @@
         </div>
     @endforeach
 </div>
+
