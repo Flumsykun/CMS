@@ -1,8 +1,14 @@
 <div wire:ignore wire:poll="refreshSession">
     <div x-data="{
-    toast: setupToasts(@js($toastList), {{ config('cms.toasts.display_time') }}),
-    add: function(detail){
-            this.toasts.push(detail);
+            toasts: setupToasts(@js($toastList), {{ config('cms.toasts.display_time') }}),
+            add: function(detail){
+                let toast = ToastObject.fromJson(detail);
+                this.toasts.push(toast);
+            },
+            show: function($el){
+                this.toasts.forEach(toast => {
+                    toast.show($el);
+                });
             }
          }"
          x-on:toast-fired.window="add($event.detail)"
