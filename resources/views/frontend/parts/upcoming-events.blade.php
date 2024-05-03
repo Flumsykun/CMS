@@ -4,7 +4,7 @@
         <div class="mt-10 text-center lg:col-start-8 lg:col-end-13 lg:row-start-1 lg:mt-9 xl:col-start-9">
             @php $highlight = $events->first(); @endphp
             @if(! empty($highlight))
-                <div class="rounded-2xl bg-voot-500 h-full">
+                <div class="rounded-2xl bg-white-500 h-full">
                     <div class="py-4 px-4">
                         <h3 class="w-full text-2xl font-bold tracking-tight sm:text-2xl lg:col-span-2 xl:col-auto text-white pb-4">
                         {{ $highlight->name }}

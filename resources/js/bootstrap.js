@@ -43,5 +43,3 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 // Alpine.plugin(ToastsPlugin)
 //
 // Livewire.start()
-//
-// // Livewire.start()
