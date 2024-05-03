@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Page;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -25,9 +26,11 @@ class PageFactory extends Factory
      */
     public function definition(): array
     {
+        $title = $this->faker->sentence;
+
         return [
-            'title' => $this->faker->sentence,
-            'slug' => $this->faker->slug,
+            'title' => $title,
+            'slug' => Str::slug($title),
             'content' =>$this->faker->paragraph,
         ];
     }
