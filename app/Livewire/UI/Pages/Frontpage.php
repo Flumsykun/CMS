@@ -3,6 +3,7 @@
 namespace App\Livewire\UI\Pages;
 
 use App\Models\Page;
+//use App\Traits\Livewire\InteractsWithToasts;
 use Livewire\Component;
 
 class Frontpage extends Component
