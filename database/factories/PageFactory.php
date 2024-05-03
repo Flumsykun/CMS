@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Page;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -9,6 +11,14 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class PageFactory extends Factory
 {
+
+    /**
+     * The name of the factory's corresponding model
+     *
+     * @var string
+     */
+    protected $model = Page::class;
+
     /**
      * Define the model's default state.
      *
@@ -16,8 +26,12 @@ class PageFactory extends Factory
      */
     public function definition(): array
     {
+        $title = $this->faker->sentence;
+
         return [
-            //
+            'title' => $title,
+            'slug' => Str::slug($title),
+            'content' =>$this->faker->paragraph,
         ];
     }
 }

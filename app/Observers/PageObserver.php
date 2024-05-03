@@ -13,25 +13,25 @@ class PageObserver
 {
     public function created(Page $page): void
     {
-        //$eventData = ['message' => 'Page created successfully!', 'type' => 'success'];
-        //Event::dispatch('showToast', $eventData);
-        ////dd('Event dispatched', $eventData);
+
+      //
+ develop
     }
 
 
     public function updated(Page $page): void
     {
-        //$eventData = ['message' => 'Page updated successfully!', 'type' => 'success'];
-        //Event::dispatch('showToast', $eventData);
-        ////dd('Event dispatched', $eventData);
+
+        //
+ develop
     }
 
 
     public function deleted(Page $page): void
     {
-        //$eventData = ['message' => 'Page deleted successfully!', 'type' => 'success'];
-        //Event::dispatch('showToast', $eventData);
-        ////dd('Event dispatched', $eventData);
+
+       //
+ develop
     }
 
 

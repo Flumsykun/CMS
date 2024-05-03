@@ -12,7 +12,9 @@ use Livewire\WithPagination;
 
 class Pages extends Component
 {
-    //use InteractsWithToasts;
+
+
+develop
     use WithPagination;
     public $modalFormVisible = false;
     public $modalConfirmDeleteVisible = false;
